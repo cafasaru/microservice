@@ -15,7 +15,15 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
 
 # Go workspace file
 go.work
+
+# ignore all .DS_Store file and .key .pem .crt .csr in ssl directory
+.DS_Store
+*.key 
+*.pem
+*.crt
+*.csr
+*.pb.go
