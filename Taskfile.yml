@@ -4,7 +4,6 @@ version: '3'
 
 vars:
   GREETING: Hello, World!
-  PROTOS_PATH: ../nats_starter_protos/proto/v1
 
 tasks:
 
@@ -15,7 +14,7 @@ tasks:
       - echo "Creating gen/v1 directory..."
       - mkdir -p gen/v1
       - echo "Generating proto files..."
-      - protoc --go_out=paths=source_relative:gen/v1 --go-grpc_out=paths=source_relative:gen/v1 --proto_path={{.PROTOS_PATH}} {{.PROTOS_PATH}}/**/*.proto
+      - protoc --go_out=paths=source_relative:gen --go-grpc_out=paths=source_relative:gen --proto_path=proto proto/v1/**/*.proto
     silent: true
 
 #================================================================

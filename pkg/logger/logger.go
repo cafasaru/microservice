@@ -3,7 +3,7 @@ package logger
 import (
 	"os"
 
-	"github.com/cafasaru/nats_starter/config"
+	"github.com/cafasaru/microservice/config"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/cafasaru/nats_starter/pkg/constants"
+	"github.com/cafasaru/microservice/pkg/constants"
 	"github.com/spf13/viper"
 )
 

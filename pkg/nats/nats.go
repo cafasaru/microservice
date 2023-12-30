@@ -3,8 +3,8 @@ package nats
 import (
 	"time"
 
-	"github.com/cafasaru/nats_starter/config"
-	"github.com/cafasaru/nats_starter/pkg/logger"
+	"github.com/cafasaru/microservice/config"
+	"github.com/cafasaru/microservice/pkg/logger"
 	"github.com/nats-io/nats.go"
 )
 

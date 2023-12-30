@@ -1,4 +1,4 @@
-module github.com/cafasaru/nats_starter
+module github.com/cafasaru/microservice
 
 go 1.21.4
 

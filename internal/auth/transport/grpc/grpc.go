@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/cafasaru/nats_starter/gen/v1/authpb"
-	"github.com/cafasaru/nats_starter/internal/auth"
-	"github.com/cafasaru/nats_starter/pkg/logger"
+	"github.com/cafasaru/microservice/gen/v1/authpb"
+	"github.com/cafasaru/microservice/internal/auth"
+	"github.com/cafasaru/microservice/pkg/logger"
 	"github.com/go-playground/validator/v10"
 	"github.com/opentracing/opentracing-go"
 )

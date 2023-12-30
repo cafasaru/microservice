@@ -3,7 +3,7 @@ package usecase
 import (
 	"context"
 
-	postgres "github.com/cafasaru/nats_starter/internal/postgres/sqlc"
+	postgres "github.com/cafasaru/microservice/internal/postgres/sqlc"
 )
 
 type authUsecase struct{}

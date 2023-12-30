@@ -6,7 +6,7 @@ import (
 	jaegercfg "github.com/uber/jaeger-client-go/config"
 	jaegerlog "github.com/uber/jaeger-client-go/log"
 
-	"github.com/cafasaru/nats_starter/config"
+	"github.com/cafasaru/microservice/config"
 	"github.com/opentracing/opentracing-go"
 	"github.com/uber/jaeger-client-go"
 	"github.com/uber/jaeger-lib/metrics"

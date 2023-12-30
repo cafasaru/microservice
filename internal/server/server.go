@@ -3,12 +3,12 @@ package server
 import (
 	"net"
 
-	"github.com/cafasaru/nats_starter/config"
-	"github.com/cafasaru/nats_starter/gen/v1/authpb"
-	authgRPC "github.com/cafasaru/nats_starter/internal/auth/transport/grpc"
-	"github.com/cafasaru/nats_starter/internal/auth/usecase"
-	postgres "github.com/cafasaru/nats_starter/internal/postgres/sqlc"
-	"github.com/cafasaru/nats_starter/pkg/logger"
+	"github.com/cafasaru/microservice/config"
+	"github.com/cafasaru/microservice/gen/v1/authpb"
+	authgRPC "github.com/cafasaru/microservice/internal/auth/transport/grpc"
+	"github.com/cafasaru/microservice/internal/auth/usecase"
+	postgres "github.com/cafasaru/microservice/internal/postgres/sqlc"
+	"github.com/cafasaru/microservice/pkg/logger"
 	"github.com/go-playground/validator/v10"
 	"github.com/labstack/echo/v4"
 	"github.com/nats-io/nats.go"

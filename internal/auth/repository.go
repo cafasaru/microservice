@@ -3,7 +3,7 @@ package auth
 import (
 	"context"
 
-	postgres "github.com/cafasaru/nats_starter/internal/postgres/sqlc"
+	postgres "github.com/cafasaru/microservice/internal/postgres/sqlc"
 )
 
 // PGRespository interface is the interface for interacting with the Postgres database
