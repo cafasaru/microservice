@@ -27,3 +27,4 @@ go.work
 *.crt
 *.csr
 *.pb.go
+*nats.creds

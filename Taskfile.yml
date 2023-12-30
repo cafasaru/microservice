@@ -7,11 +7,34 @@ vars:
   PROTOS_PATH: ../nats_starter_protos/proto/v1
 
 tasks:
-  default:
-    cmds:
-      - echo "{{.GREETING}}"
-    silent: true
-  
+
+#================================================================
+# grpc
   proto:
     cmds:
-      - protoc --go_out=paths=source_relative:gen/v1 --go-grpc_out=paths=source_relative:gen/v1 --proto_path={{.PROTOS_PATH}} {{.PROTOS_PATH}}/authpb/*.proto
+      - echo "Creating gen/v1 directory..."
+      - mkdir -p gen/v1
+      - echo "Generating proto files..."
+      - protoc --go_out=paths=source_relative:gen/v1 --go-grpc_out=paths=source_relative:gen/v1 --proto_path={{.PROTOS_PATH}} {{.PROTOS_PATH}}/**/*.proto
+    silent: true
+
+#================================================================
+# build ssl certificates
+  ssl:
+    cmds:
+      - cd ssl && ./instructions.sh
+      
+#==============================================================
+# swagger
+  swagger:
+    cmds:
+      - echo "swagger generating docs"
+      - swag init -g **/**/*.go
+    silent: true
+
+  deps:
+    cmds:
+      - echo "Installing dependencies..."
+      - go install github.com/swaggo/swag/cmd/swag@latest
+      - go mod tidy
+    silent: true
