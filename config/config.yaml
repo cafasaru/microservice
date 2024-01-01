@@ -10,7 +10,7 @@ HTTP:
   MaxConnectionAge: 5
 
 GRPC:
-  Port: ":5007"
+  Port: "0.0.0.0:5007"
   MaxConnectionIdle: 5
   Timeout: 15
   MaxConnectionAge: 5
@@ -61,6 +61,6 @@ PostgreSQL:
   PostgresqlPort: 5432
   PostgresqlUser: postgres
   PostgresqlPassword: postgres
-  PostgresqlDBName: mails_db
+  PostgresqlDBName: microservice_db
   PostgresqlSslmode: "disable"
-  PgDriver: pgx
+  PgDriver: postgresql

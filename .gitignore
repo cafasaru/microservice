@@ -28,3 +28,4 @@ go.work
 *.csr
 *.pb.go
 *nats.creds
+*generated_dart

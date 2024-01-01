@@ -15,6 +15,7 @@ tasks:
       - mkdir -p gen/v1
       - echo "Generating proto files..."
       - protoc --go_out=paths=source_relative:gen --go-grpc_out=paths=source_relative:gen --proto_path=proto proto/v1/**/*.proto
+      - protoc --dart_out=grpc:generated_dart --proto_path=proto proto/v1/**/*.proto
     silent: true
 
 #================================================================
@@ -22,6 +23,11 @@ tasks:
   ssl:
     cmds:
       - cd ssl && ./instructions.sh
+
+
+#================================================================
+# Containers
+
       
 #==============================================================
 # swagger

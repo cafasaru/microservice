@@ -24,6 +24,7 @@ func NewgRPCService(authUsecase auth.Usecase, log logger.Logger, validator *vali
 }
 
 func (g *gRPCService) SignIn(ctx context.Context, req *authpb.SignInRequest) (*authpb.SignInResponse, error) {
+	g.log.Info("RECEIVED GRPC SIGNIN REQUEST", req)
 	span, ctx := opentracing.StartSpanFromContext(ctx, "grpc.auth.SignIn")
 	defer span.Finish()
 
